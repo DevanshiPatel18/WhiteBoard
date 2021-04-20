@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteBoard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <canvas id = 'canvas' ></canvas>
+    
+    <div id = 'toolbar'>
+        <div class = 'toolElements'>
+            <div class = 'toolContent'>
+                <table class= "toolPicker">
+                    <tr>
+                        <td><button onclick="pen()" id = 'pen'>Pen</button>
+                            <input type="number" id="stroke" value="1">
+                        </td>
+                        <td><button onclick="clearStuff()">Clear</button></td>
+                        <td><button onclick="eraser()" id = 'eraser'>Eraser</button></td>
+                        <td>
+                            <button onclick="colorPicker()">
+                                <input type="color" name="color" id="color">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type = 'text/javascript'src="./script.js"></script>
+    <script>
+        if (!document.getElementById('canvas')){
+            document.append("<p id = 'no-canvas'></p>");
+            document.getElementById('no-canvas').textContent = 'Canvas not supported!';
+        }
+    </script>
+</body>
+</html>
